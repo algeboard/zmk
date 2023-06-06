@@ -58,7 +58,7 @@ jobs:
           if [ -n "${{ matrix.shield }}" ]
           then
             echo "extra_cmake_args=-DSHIELD=\"${{ matrix.shield }}\"" >> $GITHUB_ENV
-            echo "artifact_name=${{ matrix.shield }}-${{ matrix.board }}-zmk" >> $GITHUB_ENV
+            echo "artifact_name=${{ matrix.shield }}" >> $GITHUB_ENV
             echo "display_name=${{ matrix.shield }} - ${{ matrix.board }}" >> $GITHUB_ENV
           else
             echo "extra_cmake_args=" >> $GITHUB_ENV
